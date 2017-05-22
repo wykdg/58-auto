@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'untitled.ui'
 #
-# Created: Wed May 17 15:37:01 2017
+# Created: Mon May 22 10:14:25 2017
 #      by: PyQt4 UI code generator 4.11.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -30,14 +30,14 @@ class Ui_Dialog(object):
         self.groupBox = QtGui.QGroupBox(Dialog)
         self.groupBox.setGeometry(QtCore.QRect(40, 60, 451, 421))
         self.groupBox.setObjectName(_fromUtf8("groupBox"))
-        self.fangxing = QtGui.QComboBox(self.groupBox)
-        self.fangxing.setGeometry(QtCore.QRect(250, 160, 91, 22))
-        self.fangxing.setObjectName(_fromUtf8("fangxing"))
-        self.fangxing.addItem(_fromUtf8(""))
-        self.fangxing.addItem(_fromUtf8(""))
-        self.fangxing.addItem(_fromUtf8(""))
-        self.fangxing.addItem(_fromUtf8(""))
-        self.fangxing.addItem(_fromUtf8(""))
+        self.leixing = QtGui.QComboBox(self.groupBox)
+        self.leixing.setGeometry(QtCore.QRect(250, 160, 91, 22))
+        self.leixing.setObjectName(_fromUtf8("leixing"))
+        self.leixing.addItem(_fromUtf8(""))
+        self.leixing.addItem(_fromUtf8(""))
+        self.leixing.addItem(_fromUtf8(""))
+        self.leixing.addItem(_fromUtf8(""))
+        self.leixing.addItem(_fromUtf8(""))
         self.huxingting = QtGui.QLineEdit(self.groupBox)
         self.huxingting.setGeometry(QtCore.QRect(90, 80, 41, 21))
         self.huxingting.setObjectName(_fromUtf8("huxingting"))
@@ -209,11 +209,11 @@ class Ui_Dialog(object):
     def retranslateUi(self, Dialog):
         Dialog.setWindowTitle(_translate("Dialog", "Dialog", None))
         self.groupBox.setTitle(_translate("Dialog", "GroupBox", None))
-        self.fangxing.setItemText(0, _translate("Dialog", "普通住宅", None))
-        self.fangxing.setItemText(1, _translate("Dialog", "商住两用", None))
-        self.fangxing.setItemText(2, _translate("Dialog", "公寓", None))
-        self.fangxing.setItemText(3, _translate("Dialog", "平房", None))
-        self.fangxing.setItemText(4, _translate("Dialog", "别墅", None))
+        self.leixing.setItemText(0, _translate("Dialog", "普通住宅", None))
+        self.leixing.setItemText(1, _translate("Dialog", "商住两用", None))
+        self.leixing.setItemText(2, _translate("Dialog", "公寓", None))
+        self.leixing.setItemText(3, _translate("Dialog", "平房", None))
+        self.leixing.setItemText(4, _translate("Dialog", "别墅", None))
         self.zhuangxiu.setItemText(0, _translate("Dialog", "毛坯", None))
         self.zhuangxiu.setItemText(1, _translate("Dialog", "简单装修", None))
         self.zhuangxiu.setItemText(2, _translate("Dialog", "中等装修", None))

@@ -1,10 +1,11 @@
 # -*- coding: utf-8 -*-
 
 from PyQt4 import QtGui
-from a import *
+from UI import *
 
 class MainWindow(QtGui.QDialog):
-
+    class info:
+        pass
     def __init__(self,parent=None):
 
         QtGui.QWidget.__init__(self,parent)
@@ -25,11 +26,36 @@ class MainWindow(QtGui.QDialog):
         x=QtGui.QFileDialog().getExistingDirectory()
         self.ui.image_path.setText(x)
 
+    def get_info(self):
+        i=self.info()
+        i.check_states = [eval('self.ui.checkBox_' + str(x)).checkState() for x in range(1, 14)]
+        i.xiaoqu = self.ui.xiaoqu.text()
+        i.huxingshi = self.ui.huxingshi.text()
+        i.huxingting = self.ui.huxingting.text()
+        i.huxingwei = self.ui.huxingwei.text()
+        i.area = self.ui.area.text()
+        i.ceng = self.ui.ceng.text()
+        i.zongceng = self.ui.zongceng.text()
+        i.toward = self.ui.fangxiang.currentText()
+        i.zhuangxiq = self.ui.zhuangxiu.currentText()
+        i.leixing = self.ui.leixing.currentText()
+        i.zujin = self.ui.zujin.text()
+        i.yajin = self.ui.yajin.currentText()
+        i.biaoti = self.ui.biaoti.text()
+        i.miaosu = self.ui.miaosu.toPlainText()
+        i.lianxiren = self.ui.lianxiren.text()
+        i.phone = self.ui.phone.text()
+
+        return i
+
+
+
     @QtCore.pyqtSlot()
     def submit(self):
-        for i in range(1,14):
-            print eval('self.ui.checkBox_'+str(i)).checkState(),
-        yajin=self.ui.yajin.currentText()
+        info=self.get_info()
+        
+
+
 
     @QtCore.pyqtSlot()
     def load_account(self):

@@ -25,7 +25,7 @@
    <property name="title">
     <string>GroupBox</string>
    </property>
-   <widget class="QComboBox" name="fangxing">
+   <widget class="QComboBox" name="leixing">
     <property name="geometry">
      <rect>
       <x>250</x>
