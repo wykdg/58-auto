@@ -1,11 +1,29 @@
 # -*- coding: utf-8 -*-
 
 from PyQt4 import QtGui
+
 from UI import *
 from main import publish
 class MainWindow(QtGui.QDialog):
     class info:
-        pass
+
+        check_states= None
+        xiaoqu =None
+        huxingshi =None
+        huxingting =None
+        huxingwei =None
+        area =None
+        ceng =None
+        zongceng =None
+        toward =None
+        zhuangxiq =None
+        leixing =None
+        zujin =None
+        yajin =None
+        biaoti =None
+        miaosu =None
+        lianxiren =None
+        phone =None
     def __init__(self,parent=None):
 
         QtGui.QWidget.__init__(self,parent)
@@ -53,7 +71,16 @@ class MainWindow(QtGui.QDialog):
     @QtCore.pyqtSlot()
     def submit(self):
         info=self.get_info()
-        publish(None,info)
+        account={}
+        account['user_name']='123'
+        account['password']=None
+        row=self.ui.tableWidget.rowCount()
+        print row
+        self.ui.tableWidget.insertRow(0)
+        self.ui.tableWidget.setItem(0,0,QtGui.QTableWidgetItem(info.xiaoqu))
+        self.ui.tableWidget.setItem(0,1,QtGui.QTableWidgetItem(account['user_name']))
+        self.ui.tableWidget.setItem(0,2,QtGui.QTableWidgetItem(u'正在处理'))
+        # publish(None,info
 
 
 
@@ -62,7 +89,8 @@ class MainWindow(QtGui.QDialog):
         file_path=QtGui.QFileDialog().getOpenFileName()
         for line in open(file_path).readlines():
             print line
-            self.ui.accounts.append(line)
+            # self.ui.columnView.item
+
 
 if __name__ == "__main__":
 
