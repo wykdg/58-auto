@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'untitled.ui'
 #
-# Created: Mon May 22 10:14:25 2017
+# Created: Tue May 23 11:55:44 2017
 #      by: PyQt4 UI code generator 4.11.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -26,7 +26,7 @@ except AttributeError:
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName(_fromUtf8("Dialog"))
-        Dialog.resize(1062, 731)
+        Dialog.resize(1454, 766)
         self.groupBox = QtGui.QGroupBox(Dialog)
         self.groupBox.setGeometry(QtCore.QRect(40, 60, 451, 421))
         self.groupBox.setObjectName(_fromUtf8("groupBox"))
@@ -193,15 +193,29 @@ class Ui_Dialog(object):
         self.groupBox_4 = QtGui.QGroupBox(Dialog)
         self.groupBox_4.setGeometry(QtCore.QRect(700, 400, 311, 301))
         self.groupBox_4.setObjectName(_fromUtf8("groupBox_4"))
-        self.accounts = QtGui.QTextBrowser(self.groupBox_4)
-        self.accounts.setGeometry(QtCore.QRect(30, 30, 256, 192))
-        self.accounts.setObjectName(_fromUtf8("accounts"))
         self.load = QtGui.QPushButton(self.groupBox_4)
         self.load.setGeometry(QtCore.QRect(120, 250, 75, 23))
         self.load.setObjectName(_fromUtf8("load"))
+        self.columnView = QtGui.QColumnView(self.groupBox_4)
+        self.columnView.setGeometry(QtCore.QRect(30, 20, 256, 192))
+        self.columnView.setObjectName(_fromUtf8("columnView"))
         self.submit = QtGui.QPushButton(Dialog)
         self.submit.setGeometry(QtCore.QRect(510, 630, 151, 61))
         self.submit.setObjectName(_fromUtf8("submit"))
+        self.groupBox_5 = QtGui.QGroupBox(Dialog)
+        self.groupBox_5.setGeometry(QtCore.QRect(1010, 40, 421, 371))
+        self.groupBox_5.setObjectName(_fromUtf8("groupBox_5"))
+        self.tableWidget = QtGui.QTableWidget(self.groupBox_5)
+        self.tableWidget.setGeometry(QtCore.QRect(30, 30, 341, 251))
+        self.tableWidget.setObjectName(_fromUtf8("tableWidget"))
+        self.tableWidget.setColumnCount(3)
+        self.tableWidget.setRowCount(0)
+        item = QtGui.QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(0, item)
+        item = QtGui.QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(1, item)
+        item = QtGui.QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(2, item)
 
         self.retranslateUi(Dialog)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
@@ -263,4 +277,11 @@ class Ui_Dialog(object):
         self.groupBox_4.setTitle(_translate("Dialog", "GroupBox", None))
         self.load.setText(_translate("Dialog", "导入", None))
         self.submit.setText(_translate("Dialog", "发布", None))
+        self.groupBox_5.setTitle(_translate("Dialog", "GroupBox", None))
+        item = self.tableWidget.horizontalHeaderItem(0)
+        item.setText(_translate("Dialog", "小区名", None))
+        item = self.tableWidget.horizontalHeaderItem(1)
+        item.setText(_translate("Dialog", "账号", None))
+        item = self.tableWidget.horizontalHeaderItem(2)
+        item.setText(_translate("Dialog", "状态", None))
 
